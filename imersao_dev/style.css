@@ -1,0 +1,324 @@
+body {
+  background: url("https://i.pinimg.com/originals/4e/d9/3a/4ed93a925416e114dd4f9657e9121c1b.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+}
+.container {
+  justify-content: space-around;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  flex-direction: row-reverse;
+  font-size: 0.5vmax;
+}
+h1,
+h2,
+h3,
+h4,
+H5 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: rgba(120, 120, 208);
+  font-size: 1.2rem;
+}
+h2 {
+  font-size: 1.1rem;
+}
+h3 {
+  font-size: 0.9rem;
+}
+h4 {
+  background-color: rgba(37, 194, 82, 0.8);
+}
+h5 {
+  background-color: rgba(209, 40, 28, 0.8);
+}
+.formulario {
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(120, 120, 208);
+}
+button {
+  padding: 2px 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  border-radius: 5px;
+  margin: 10px;
+  min-height: 300px;
+  border: solid rgb(120, 120, 208) 3px;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+#conterfilmes > .filmes {
+  padding: 5px;
+  margin: 1.5% auto;
+  border-radius: 10px;
+  background: rgba(120, 120, 208);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 800px) {
+  .card {
+    width: 45%;
+  }
+  #conterfilmes > .filmes {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 99%;
+  }
+  #conterfilmes > .filmes {
+    width: 40%;
+  }
+}
+.card:nth-child(1) {
+  background-image: url(https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-1-conversor-de-moedas.png);
+}
+.card:nth-child(2) {
+  background-image: url(https://i.pinimg.com/originals/67/58/d0/6758d0fa5c72afd6f4727c6232398db0.jpg);
+  background-position: center;
+}
+.card:nth-child(3) {
+  background-image: url(https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-03-mentalista.png);
+}
+.card:nth-child(4) {
+  background-image: url(https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-calc.png);
+  background-position: center;
+}
+.card:nth-child(5) {
+  justify-content: center;
+  flex-direction: row;
+  background-image: url(https://image.freepik.com/vetores-gratis/wallpaper-de-paisagem-em-design-plano_74890-34.jpg);
+}
+.card:nth-child(6) {
+  background-image: url(https://www.alura.com.br/assets/img/imersoes/dev-2021/tabela-classificacao-bg.png);
+}
+.card:nth-child(7) {
+  background-image: url(https://i.pinimg.com/originals/00/93/9d/00939dff0059e823658afe98bb6d87a4.jpg);
+  min-height: 90vh;
+}
+.card:nth-child(8) {
+  background-color: white;
+  background: rgb(120, 120, 208);
+  justify-content: space-around;
+  
+}
+#conterfilmes {
+  justify-content: center;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+#conterfilmes > .filmes:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.05);
+  background: rgb(120, 120, 208);
+}
+.filmes > img {
+  margin: 5px;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: fill-box;
+  object-position: top;
+}
+table {
+  font-size: 3.0vmin;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+td {
+  background: rgba(120, 120, 208);
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  text-align: start;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+tr {
+  vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+}
+th {
+  background: rgba(120, 120, 208);
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+input[type="radio"] {
+  transform: scale(0.75);
+  margin: 0px;
+  padding: 0px;
+}
+#insertcardNovas {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateY(1);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+#insertcardNovas > #cartaUsuario,
+#cartaComputador {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  border: solid rgb(120, 120, 208) 2px;
+  margin: 5px;
+  padding: 0px;
+  width: 44%;
+  border-radius: 3px;
+  max-width: 250px;
+  min-height: 65vh;
+  transition: 1s;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/originals/db/f0/3e/dbf03e1c61caff19533254b7290fbc61.jpg");
+  animation: bounce 1.5s ;
+  box-shadow: 8px 1px 6px 3px rgba(0,0,0,0.45);
+}
+.card:nth-child(8) > img {
+  width: 40%;
+  min-width: 200px;
+  height: 45%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+  border: solid rgb(255, 255, 255) 4px;
+}
+
+.redesSociais {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+}
+.icones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+}
+.icones > img {
+  width: 7vh;
+  height: max-content;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 100%;
+}
+
+#Baralho1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  padding: 0px;
+  margin: 0px 60px auto;
+}
+.CardsBaralho1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: solid rgb(120, 120, 208) 2px;
+  border-radius: 3px;
+  margin: 5px 5px 5px -45px;
+  padding: 0px;
+  width: 60px;
+  height: 90px;
+  transition: 1s;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/originals/db/f0/3e/dbf03e1c61caff19533254b7290fbc61.jpg");
+  box-shadow: 8px 1px 6px 3px rgba(0,0,0,0.45);
+}
+
+.CardsBaralho1:hover {
+animation: rotate 1s;
+}
+.tabelaBaralho1 {
+  background: rgba(120, 120, 208);
+  color: white;
+  text-align: center;
+  text-justify: justify;
+  font-size: 2vh;
+}
