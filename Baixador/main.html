@@ -1,0 +1,211 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Baixador</title>
+        <link rel="icon" href="https://cdn6.aptoide.com/imgs/c/e/1/ce1cbf2870d11c7074a31f4637760b9d_icon.png" type="image/x-icon">
+        <style>
+            body{
+                border-radius: 5px;
+                padding: 20px;
+                margin: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                height: 90vh;
+                background-size: cover;
+                background-image: url(https://i.pinimg.com/originals/90/d3/69/90d369307d0a2cac8dd2cea650f4f797.jpg);
+                background-position: center;
+            }
+            input {
+                border-radius: 3px;
+                margin: 10px;
+                border: solid rgb(187, 187, 187);
+                padding: 5px;
+                width:70%;
+                text-align: center;
+            }
+            button, select {
+                border-radius: 3px;
+                margin: 2px;
+                border: solid rgb(187, 187, 187); 
+                cursor: pointer; 
+            }
+            div {
+                height: 25px;
+                border-radius: 3px;
+                margin: 2px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                width: 100%;
+                color: white;
+            }
+            header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width:35%;
+                height: 35%;
+                min-width: 290px;
+                margin: 0px;
+                padding: 10px;
+                background-color: rgba(0,0,0,.7);
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        </select>
+        <div>
+            <select id="opcoes"></select>
+            Url:<input type="url" id="url" placeholder="Url do primeiro do Episodio" autofocus>
+        </div>
+        <div>
+            Iniciar Temp:
+            <input type="number" id="iniciarTemporada" placeholder="Season" value="1">
+            Terminar Temp:
+            <input type="number" id="finalizarTemporada" placeholder="Season" value="20">
+        </div>
+        <div>
+            Iniciar Ep:
+            <input type="number" id="iniciarEpsodio" placeholder="Ep." value="1">
+            Terminar Ep:
+            <input type="number" id="finalEpsodio" placeholder="Ep." value="25">
+        </div>
+        
+        <button type="submit" onclick="filmes()">Pesquisar</button>
+    </header>
+    <script>
+        //const prelink = "https://workstation.canais.ink"
+        //const prelink = "https://d14o9knl5w9rhh.cloudfront.net"
+        //const prelink = "https://dg295molxk994.cloudfront.net"
+        //const prelink = "https://downloads.cometa.link"
+        //const prelink = "https://downloads2.cometa.link"
+        const prelink = "https://downloads2.cometa.link:8443"
+        function biblioteca(nome,url,img){
+            this.nome = nome,
+            this.url = url,
+            this.img = img
+        }
+        const blackList = new biblioteca(
+        "BlackList",
+        "/RCServer09/ondemand/THEBLCKLSTT01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BZDA1MzE3M2EtNTE4Ni00OGE4LWE1NjctYzFhMzA2NDgxMDIxXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_UX182_CR0,0,182,268_AL_.jpg"
+        )
+        const csila = new biblioteca(
+        "CSI: LA",
+        "/RCServer11/ondemand/CSILAT01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BMTkyODgwMDMzNV5BMl5BanBnXkFtZTgwMTExOTMyMjE@._V1_UY268_CR4,0,182,268_AL_.jpg"
+        )
+        const fbi = new biblioteca(
+        "FBI",    
+        "/RCServer03/ondemand/FBIT01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BMTg5Mjg5NDk4OV5BMl5BanBnXkFtZTgwMjY1ODIyNjM@._V1_UY268_CR1,0,182,268_AL_.jpg"
+        )
+        const criminalMinds = new biblioteca(
+        "Criminal Minds",
+        "/RCServer03/ondemand/CRMNLMNDST04EP17.mp4",
+        "https://m.media-amazon.com/images/M/MV5BNGE2ZmFkZTYtNjRiOS00ZjE3LThjOWMtZTViZjRmNDFjNTQwXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX182_CR0,0,182,268_AL_.jpg"
+        )
+        const kingDom = new biblioteca(
+        "KingDom",
+        "/RCServer03/ondemand/KNGDMT01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BNTBlZmE4YzItNTY5Mi00NmIxLTlhZTAtOWIxNjFlNTMzNmI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg"
+        )
+        const osSimpsons = new biblioteca(
+        "Os Simpsons",
+        "/RCServer01/videos/OSMPST01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BYjFkMTlkYWUtZWFhNy00M2FmLThiOTYtYTRiYjVlZWYxNmJkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        )
+        const southPark  = new biblioteca(
+        "South Park",
+        "/RCServer01/videos/STHPRKT01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BOGE2YWUzMDItNTg2Ny00NTUzLTlmZGYtNWMyNzVjMjQ3MThkXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg",
+        )
+        const greysAnatomy = new biblioteca(
+        "Grey's Anatomy",
+        "/RCServer03/ondemand/GRATS01EP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BMjgwNGNkZGYtMWQyYS00YjEzLWFmZTctODUzYWMxOWJkNTAzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+        )
+        const superChoque = new biblioteca(
+        "Super Choque",
+        "/RCServer10/ondemand/SPRCHQEP01.mp4",
+        "https://m.media-amazon.com/images/M/MV5BZGQ2ZDc1MzYtNWRlNi00YjFjLTk4YTctZTNhYWExMzhhNzk1XkEyXkFqcGdeQXVyMTg2NjYzOA@@._V1_UY268_CR3,0,182,268_AL_.jpg"
+        )
+        const arryBilhiotecaSeries = [
+        greysAnatomy,
+        blackList,
+        fbi,
+        kingDom,
+        csila,
+        criminalMinds,
+        osSimpsons,
+        southPark,
+        superChoque,
+        ]
+        for(u in arryBilhiotecaSeries){
+            const poster = document.getElementById('opcoes')
+            poster.innerHTML += `
+            <option onclick="filmes()" value="${prelink+arryBilhiotecaSeries[u].url}">${arryBilhiotecaSeries[u].nome}</option>
+            `
+        }
+        const selecao = ""
+        let url = ""
+        function filmes() {
+            console.log("Apertou Botão")
+            const urlInsert = document.getElementById('url').value
+            if(urlInsert == ""){                    
+                const selecao = String(document.getElementById('opcoes').value)
+                url = selecao.slice(0,-10)
+            }
+            else{                    
+                const selecao = String(document.getElementById('url').value)
+                url = selecao.slice(0,-10);
+            }                
+            const iniciarEpsodio = parseInt(document.getElementById('iniciarEpsodio').value)
+            const finalEpsodio = parseInt(document.getElementById('finalEpsodio').value)
+            const iniciarTemporada = parseInt(document.getElementById('iniciarTemporada').value)
+            const finalizarTemporada = parseInt(document.getElementById('finalizarTemporada').value)                
+            let urls = []
+            for(i=iniciarTemporada ;i <= finalizarTemporada; i++){
+                for(j=iniciarEpsodio ;j <= finalEpsodio ; j++){
+                    if (i<10){
+                        if (j<10){
+                            baixar = url+"0"+i+"EP0"+j+".mp4"
+                            urls.push(baixar)
+                        }
+                        else{
+                            baixar = url+"0"+i+"EP"+j+".mp4"
+                            urls.push(baixar)
+                        }
+                    }
+                    else{
+                        if (j<10){
+                            baixar = url+i+"EP0"+j+".mp4"
+                            urls.push(baixar)
+                        }
+                        else{
+                            baixar = url+i+"EP"+j+".mp4"
+                            urls.push(baixar)
+                        }}}
+                    }
+                    let tempoOpen = 5000
+                    let tempoClose = 4000
+                    let k = 0
+                    function delay(){
+                        let Pagina = window.open(urls[k],'Download','width=,height=,resizable=no,menubar=no,status=no,toolbar=no,channelmode=no');
+                        setTimeout(function(){Pagina.close()},tempoClose)  
+                        console.log(urls[k])
+                        k++
+                        if(k>=urls.length){clearInterval(intervalo)}
+                    }
+                    let intervalo = setInterval(delay,tempoOpen)
+                }
+            </script>
+        </body>
+        </html>

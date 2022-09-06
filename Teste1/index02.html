@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato</title>
+<link rel="stylesheet" href="css01.css">
+<link rel="stylesheet" href="css02.css">
+</head>
+<body>
+  <div id="menu">
+    <a href="index01.html"><img src="img/faicon.png" alt="faicon" class="faicon"></a>
+    <a href="index01.html" class="submenu">INICIO</a>
+    <a href="index02.html" class="submenu">CONTATO</a>
+    <a href="index03.html" class="submenu">PORTIFÓLIO</a>
+</div>
+<div id="corpo">
+<div>
+<h1>CONTATO</h1>
+</div>
+<form class="formulario" name="form1" method="post" action="dados.php" >
+<div class="conteiner">
+        <article class="item">
+        Nome: <input class=black type="text" name="nome" placeholder="nome" autofocus /></br>
+        Senha: <input type="password" name="senha" placeholder="8 digitos"/></br>
+        Email: <input type="email" name="email" placeholder="Gmail"/></br></br>
+        Escolha um arquivo <input type="file" name="pdf"/></br>
+        </article>
+        <article class="item">
+        Escolha quais carros quer: </br>
+        <input type="checkbox" name="car" value="Camaro"/>Camaro<br/>
+        <input type="checkbox" name="car" value="Variante"/>Variante<br/>
+        <input type="checkbox" name="car" value="Punto"/>Punto<br/>
+        <input type="checkbox" name="car" value="Fusca"/>Fusca<br/><br/>
+      </article>
+      <article class="item">
+        Escolha seu sexo:</br>
+        <input type="radio" name="sexo" value="F" ckeked="ckeked">Feminino
+        <input type="radio" name="sexo" value="M">Masculino
+      </br></br>
+        Escolha sua fruta favorita:
+        <input list=”frutas” />
+        <datalist id=”frutas” name=”frutas”> 
+        <option value=Maça>
+        <option value=Banana>
+        <option value=Morango>
+        <option value=Abacaxi>
+        <option value=Melancia>
+        <option value=Pera>
+        <option value=Uva>
+        </datalist>
+        </article>
+        <article class="item">
+        tecla:
+        <input placeholder="insira seu nome" />
+        </article>
+        <article class="item">
+        <input type="button" value="Não aperte este Botão!" onclick="alert('Obrigado')" placeholder="iiii"/>
+        </br><br>
+        <input type="submit" value="Enviar"/>
+        </article>
+        <article class="item">
+    <a href="index01.html">Inicio</a>
+      </article>
+    </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="MariaFlix" />
+    <meta property="og:description" content="See Videos" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="../img/netflix-icon.png" type="image/x-icon" />
+    <title>MariaFlix</title>
+    <link rel="stylesheet" href="../css/style.css">
+    </style>
+</head>
+
+<body>
+    <div id="exibir"></div>
+    <div id="conteiner">
+        <header id="cabecalho">
+            <a style="text-decoration: none;" href="../main.html">
+                <h3>HOME</h3>
+            </a>
+            <a onclick="filmeRandom()" style="text-decoration: none;" href="#">
+                <h3>ALEATÓRIO</h3>
+            </a>
+            <div id="pag">
+                <H3 id="pagcont"></H3>
+                <a style="text-decoration: none;" href="#" onclick="backPage()">
+                    <H3>←</H3>
+                </a>
+                <a style="text-decoration: none ;" onclick="nextPage()" href="#">
+                    <H3>→</H3>
+                </a>
+            </div>
+        </header>
+        <div id="conteinerLastview"></div>
+        <span id="lv"></span>
+        <div id="cards"></div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+.movieRow{
+    margin-bottom: 30px;
+}
+.movieRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+.movieRow--listarea{
+    overflow-x: hidden;
+}
+.movieRow--list{
+    transition: 0.7s;
+    padding-left: 30px;
+}
+.movieRow--item{
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.movieRow--item img {
+    width: 100%;
+    transform: scale(.9);
+    transition: all ease .2s;
+}
+.movieRow--item img:hover {
+    transform: scale(1);
+    transition: all ease .2s;
+}
+.movieRow--left,
+.movieRow--right{
+    position:absolute;
+    width:40px;
+    height:225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;    
+    margin: 0px;
+    padding: 0px 5px;
+    overflow:hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(.9);
+}
+.movieRow--left{
+    left:0px;
+    justify-content: flex-start;
+}
+.movieRow--right{
+    right: 0px;
+    justify-content: center;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1;}
+    
+    .movieRow--left:hover,
+    .movieRow--right:hover{
+        transform: scale(1);
+    }
+    
+    @media (max-width:760px) {
+        .movieRow--left,
+        .movieRow--right{
+            opacity: 1;
+        }
+        
+    }

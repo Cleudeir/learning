@@ -1,0 +1,266 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(218, 215, 215);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 40px;
+    background-color: rgba(19, 60, 90, 0.9);
+}
+
+#season {
+    border-radius: 3px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#season>h3 {
+    margin: 0px;
+}
+
+header>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border-radius: 3px;
+    margin: 2px;
+    padding: 3px auto;
+    text-align: center;
+    height: 20px;
+    width: 30px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+select:focus,
+input:focus {
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+    border-radius: 3px;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+#lastView {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 50vh;
+    background-color: rgba(19, 60, 90, 0.7);
+}
+
+#cardLastView {
+    margin-top: 40px;
+    padding: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(19, 60, 90, 0.9);
+    text-decoration: none;
+    cursor: pointer;
+    height: 80%;
+}
+
+#cardLastView:hover,
+#cardLastView:focus {
+    margin-top: 40px;
+    padding: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(86, 135, 226);
+    text-decoration: none;
+    background-color: gold;
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 90%;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+h4 {
+    position: relative;
+    color: whitesmoke;
+    font-size: 85%;
+    padding: 0px 2px;
+    margin: 0px;
+}
+
+h3 {
+    color: whitesmoke;
+    font-size: 80%;
+    padding: 0px 5px;
+    ;
+    margin: 0px;
+}
+
+h5 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+}
+
+#exibir {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    background-color: rgba(10, 41, 63, 0.9);
+}
+
+#infoEpsodio {
+    position: absolute;
+    top: 0px;
+    display: inline-flex;
+    z-index: 2;
+    margin: 5px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.videos {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    margin-top: -14px;
+}
+
+.cardposter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    padding: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(19, 60, 90, 0.9);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cardposter:hover,
+.cardposter:focus {
+    margin: 4px;
+    padding: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(86, 135, 226);
+    text-decoration: none;
+    background-color: gold;
+}
+
+a {
+    margin: 5px;
+    padding: 2px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 74, 213, .90);
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    background-color: rgba(0, 247, 91, 0.6);
+}
+
+@media screen and (max-device-width: 650px) and (orientation: portrait) {
+    .cardposter {
+        width: 40%;
+    }
+    #lastView {
+        height: 50vh;
+    }
+    .videos {
+        position: absolute;
+        transform: rotate(90deg);
+        transform-origin: bottom left;
+        width: 101vh;
+        height: 101vw;
+        padding: 0px;
+        margin: -101vw 0px 0px 0px;
+        object-fit: cover;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media screen and (min-device-width: 650px) {
+    .cardposter {
+        width: 150px;
+        height: 250px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    35% {
+        opacity: 0;
+        transform: scale(0.5)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
