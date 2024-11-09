@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "medicamento_expo",
+    "slug": "medicamento_expo",
+    "version": "1.0.0",
+    "sdkVersion": "46.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "com.cleudeir.medicamento_expo"
+    },
+    "ios": {
+      "bundleIdentifier": "n"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+POST http://127.0.0.1:4000/matches/create
+content-type: application/json
+
+{
+"homeTeamName": "home",
+"awayTeamName": "away",
+"matchDate": "2011-03-11 00:00:00"
+}
+####
+PUT http://127.0.0.1:4000/matches/update
+content-type: application/json
+
+{
+"matchId": 4,
+"homeTeamScore": 3,
+"awayTeamScore": 2
+}
+####
+GET http://127.0.0.1:4000/matches/readAll
+####
+GET http://127.0.0.1:4000/matches/readAllByDate?date=2023-06-28T22:50:00.000Z&type=after&range=week
+####
+DELETE http://127.0.0.1:4000/matches/remove?matchId=1

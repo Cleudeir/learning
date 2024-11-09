@@ -1,0 +1,42 @@
+POST http://127.0.0.1:4000/clients/create
+content-type: application/json
+
+{
+"email": "test@test.com",
+"password": "12345678",
+"pixKey": "test@test.com",
+"permission": "admin"
+}
+####
+PUT http://127.0.0.1:4000/clients/update
+content-type: application/json
+
+{
+"clientId":1,
+"permission": "admin"
+}
+####
+POST http://127.0.0.1:4000/clients/readByEmail
+content-type: application/json
+
+{
+"email": "eszstxwssw@gmail.comsssss",
+"password": "123123123",
+"pushToken": "eWj_xMwzQYytS1hALe5FYA:APA91bHT6toG7MrBJA98ob3YL5d61-XNWflEtLOIagBMwdmzgJ9q6jFDFf8dvji8kcL3J-jp0r-dnpye4j45w38plcEQ58FYXtmtXaG00y7r3aIrwDLP7k5IT7y0E6hgmqxiKUxPmHIK"
+}
+####
+DELETE http://127.0.0.1:4000/clients/remove?clientId=2
+####
+GET http://127.0.0.1:4000/clients/readAll
+
+###
+POST http://54.208.113.84:8080/clients/create
+content-type: application/json
+
+{
+"email": "test@test.com",
+"password": "12345678",
+"pixKey": "test@test.com",
+"permission": "admin"
+}
+####

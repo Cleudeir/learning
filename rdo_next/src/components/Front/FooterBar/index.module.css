@@ -1,0 +1,53 @@
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .pages {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .pages a{
+    margin: 5px;
+  }
+  
+  .openHours {
+    margin-bottom: 10px;
+  }
+  .openHours p {
+    margin: 0px;
+  }
+  
+  .facebookIcon {
+    background-image: url('/facebook.svg');
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+  }
+  
+  .twitterIcon {
+    background-image: url('/twitter.svg');
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+  }
+  
+  .instagramIcon {
+    background-image: url('/instagram.svg');
+    width: 28px;
+    height: 32px;
+    margin: 0 10px;
+  }
+  

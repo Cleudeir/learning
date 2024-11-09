@@ -1,0 +1,40 @@
+POST http://127.0.0.1:4000/guess/create
+content-type: application/json
+
+{
+"homeTeamGuess": 0,
+"awayTeamGuess": 2,
+"paymentMethod": "credit card",
+"requestPayment": "asdas",
+"responsePayment": "asdsad",
+"value" : 100,
+"matchId": 1,
+"clientId":1
+}
+####
+PUT http://127.0.0.1:4000/guess/update
+content-type: application/json
+
+{
+"guessId": 6,
+"homeTeamGuess": 2,
+"awayTeamGuess": 2,
+"value" : 100,
+"matchId": 4,
+"clientId": 1,
+"paid": true
+}
+###
+DELETE http://127.0.0.1:4000/guess/remove?guessId=5
+###
+GET http://127.0.0.1:4000/guess/readAll
+###
+GET http://127.0.0.1:4000/guess/readAllByDate?date=2023-05-31T11:55:40.000Z&type=after
+###
+GET http://127.0.0.1:4000/guess/readById?guessId=7
+###
+GET http://127.0.0.1:4000/guess/readAllByMatch?matchId=1
+###
+GET http://127.0.0.1:4000/guess/readAllByClient?clientId=1
+###
+GET http://127.0.0.1:4000/guess/readAllByMatchWinner?matchId=1

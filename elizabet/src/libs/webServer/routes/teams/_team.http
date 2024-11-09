@@ -1,0 +1,18 @@
+POST http://127.0.0.1:4000/teams/create
+content-type: application/json
+
+{
+"name": "homea steamaa"
+}
+####
+PUT http://127.0.0.1:4000/teams/update
+content-type: application/json
+
+{
+"teamId": 1,
+"name": "test"
+}
+####
+GET http://127.0.0.1:4000/teams/readAll
+####
+DELETE http://127.0.0.1:4000/teams/remove?teamId=1

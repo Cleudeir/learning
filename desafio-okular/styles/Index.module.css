@@ -1,0 +1,140 @@
+.main,
+.main_theater {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 40px 42.3vw auto 100px;
+  grid-column-gap: 0px;
+  grid-row-gap: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main_theater {
+  grid-template-rows: 40px auto auto 100px;
+}
+
+
+.Header {
+  grid-area: 1 / 1 / 2 / 3;
+  padding: 0px 0px 5px 0px;
+}
+
+.video,
+.video_theater {
+  grid-area: 2 / 1 / 3 / 2;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.video_theater {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.listVideo,
+.listVideo_theater {
+  grid-area: 2 / 2 / 4 / 3;
+  padding: 0px 5px;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.listVideo_theater {
+  grid-area: 3 / 2 / 4 / 3;
+  width: 100%;
+}
+
+.comments {
+  grid-area: 3 / 1 / 4 / 2;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.footer {
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+.main_fullScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.video_fullScreen {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-Index: 1;
+  overflow: hidden;
+}
+
+.Header_fullScreen,
+.listVideo_fullScreen,
+.comments_fullScreen,
+.footer_fullScreen {
+  display: none;
+  height: 0px;
+  width: 0px;
+}
+
+
+.main_fullScreenPortrait {
+  position: relative;
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  padding: 0;
+  object-Fit: cover;
+  top: 0;
+  left: 0;
+  margin-Top: -100vw;
+  height: 100vw;
+  width: 100vh;
+  z-Index: 4;
+  overflow: hidden;
+}
+
+.video_fullScreenPortrait {
+  height: 100%;
+  width: 100%;
+}
+
+
+@media (max-width: 769px) {
+  .main_theater {
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 40px auto auto 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_theater {
+    grid-template-columns: 100%;
+    grid-template-rows: 40px auto auto auto;
+  }
+
+  .Header {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .video_theater {
+    grid-area: 2 / 1 / 3 / 2;
+
+  }
+
+  .listVideo_theater {
+    grid-area: 4 / 1 / 5 / 2;
+
+  }
+
+  .comments {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .footer {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}

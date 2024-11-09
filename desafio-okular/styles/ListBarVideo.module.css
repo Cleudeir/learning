@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+.container input {
+  width: 99.8%;
+  padding: 10px 0px;
+  position: relative;
+  margin-top: 5px;
+  border: solid 1px black;
+  margin: auto;
+  height: 100%;
+
+}
+
+.container input::placeholder {
+  font-weight: bold;
+  opacity: 1;
+  text-align: center;
+}
+
+.videos {
+  width: 100%;
+  height: 100vh;
+}
+
+.rowVideos {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden
+}
+
+.rowVideos::-webkit-scrollbar {
+  width: .5em;
+}
+
+.rowVideos::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.rowVideos::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
